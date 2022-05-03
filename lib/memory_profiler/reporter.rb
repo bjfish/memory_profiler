@@ -89,7 +89,7 @@ module MemoryProfiler
     # Stores results along with meta data of objects collected.
     def object_list(generation)
 
-      rvalue_size = GC::INTERNAL_CONSTANTS[:RVALUE_SIZE]
+      rvalue_size = 40 #GC::INTERNAL_CONSTANTS[:RVALUE_SIZE]
       helper = Helpers.new
 
       result = StatHash.new.compare_by_identity
